@@ -7,7 +7,7 @@ cardioid <- function(num_pts, stride) {
   pts <- data.frame(x = cos(radian_indices), y = sin(radian_indices))
   startx <- pts$x[1:num_pts]
   starty <- pts$y[1:num_pts]
-  end_indices <- (1:num_pts * stride) %% num_pts
+  end_indices <- as.integer(1:num_pts * stride) %% num_pts
   end_indices[which(end_indices == 0)] = num_pts
   endx <- pts$x[end_indices]
   endy <- pts$y[end_indices]
@@ -26,7 +26,8 @@ cardioid <- function(num_pts, stride) {
     panel.background=element_blank(),
     panel.border=element_blank(),
     panel.grid.major=element_blank(),
-    panel.grid.minor=element_blank(),plot.background=element_blank()
+    panel.grid.minor=element_blank(),
+    plot.background=element_blank()
   )
   
   return(p)
