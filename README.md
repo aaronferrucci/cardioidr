@@ -9,3 +9,4 @@ Quick example: try
 cardioid(72, 2)
 ```
 
+![A cardioid](https://github.com/aaronferrucci/cardioidr/blob/master/anim.gif)
